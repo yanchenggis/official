@@ -45,7 +45,7 @@
         }
 
         .banner-space {
-            background-image: url('s1.jpg');
+            background-image: url('path/to/your/satellite-image.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -88,14 +88,17 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #4a9eff;
             transform: translateY(-2px);
         }
 
@@ -106,7 +109,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #667eea;
+            background: #4a9eff;
             transition: width 0.3s ease;
         }
 
@@ -116,7 +119,7 @@
 
         /* Main Content */
         main {
-            margin-top: 140px;
+            margin-top: 80px;
             padding: 2rem 0;
         }
 
@@ -168,9 +171,10 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #667eea;
+            border: 5px solid #404040;
             transition: transform 0.3s ease;
             justify-self: center;
+            box-shadow: 0 8px 25px rgba(64, 64, 64, 0.3);
         }
 
         .profile-img:hover {
@@ -387,9 +391,9 @@
                 </div>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="https://storymaps.arcgis.com/stories/97eb80f0f4b6427bbc94e681d975d8f4">Erasmus</a></li>
-                        <li><a href="https://doi.org/10.3390/land13111878">Publications</a></li>
-                        <li><a href="https://www.linkedin.com/in/yan-cheng-yc-tan-95ba90288/" target="_blank">LinkedIn</a></li>
+                        <li><a href="#erasmus">Erasmus</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
                     </ul>
                 </nav>
             </div>
@@ -402,18 +406,11 @@
             <section class="section" id="about">
                 <h2>About Me</h2>
                 <div class="intro-content">
-                    <img src="me.jpg" class="profile-img">
+                    <img src="images/your-profile-photo.jpg" alt="Your Name" class="profile-img">
                     <div class="intro-text">
-                        <h3>Hello, I'm Yan Cheng</h3>
-                        <p>I am a GIS and Remote Sensing Specialist with a Master's in GIS and Spatial Planning, dedicated to applying 
-                            geospatial technology to solve real-world environmental challenges. My experience spans flood modeling, 
-                            fire susceptibility mapping, urban accessibility analysis, and nature-based solutions, utilizing tools such 
-                            as ArcMap, QGIS, Google Earth Engine, SNAP, and both MSI and SAR imagery.</p>
-                        <p>My international experience has enhanced my ability to collaborate effectively across diverse teams while 
-                            maintaining the self-motivation needed for independent work. Having participated in projects across multiple 
-                            countries, I bring a global perspective to local challenges. I remain flexible regarding work arrangements, 
-                            open to both remote positions and relocation opportunities that allow me to contribute to impactful geospatial 
-                            initiatives.</p>
+                        <h3>Hello, I'm [Your Name]</h3>
+                        <p>Welcome to my portfolio! I'm a passionate researcher specializing in remote sensing, GIS, and spatial analysis. With a strong background in geospatial technologies and data science, I focus on innovative solutions for environmental monitoring and sustainable development.</p>
+                        <p>My work combines cutting-edge technology with practical applications to address real-world challenges. I'm dedicated to advancing our understanding of Earth systems through the power of geospatial analysis and remote sensing technologies.</p>
                     </div>
                 </div>
             </section>
@@ -425,37 +422,45 @@
                     <div class="skill-category">
                         <h3>Software</h3>
                         <ul class="skill-list">
-                            <li>ArcMap</li>
-                            <li>QGIS</li>
-                            <li>Google Earth Engine</li>
-                            <li>SNAP</li>
                             <li>Python</li>
+                            <li>R Programming</li>
+                            <li>MATLAB</li>
+                            <li>JavaScript</li>
                             <li>SQL</li>
-                            <li>Visual Paradigm</li>
+                            <li>Google Earth Engine</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Remote Sensing</h3>
                         <ul class="skill-list">
-                            <li>SAR and Optical Imagery Processing</li>
-                            <li>Vegetation Index Analysis</li>
-                            <li>Land Cover Classification by Machine Learning Algorithms</li>
-                            <li>Change Classification</li>
-                            <li>Wildfire Detection</li>
-                            <li>Flood Modeling</li>
-                            <li>Species Resilience Analysis</li>
+                            <li>Satellite Image Analysis</li>
+                            <li>ENVI & ERDAS IMAGINE</li>
+                            <li>Spectral Analysis</li>
+                            <li>Change Detection</li>
+                            <li>Classification Algorithms</li>
+                            <li>Hyperspectral Imaging</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>GIS Skills</h3>
                         <ul class="skill-list">
+                            <li>ArcGIS Pro</li>
+                            <li>QGIS</li>
                             <li>Spatial Analysis</li>
-                            <li>Web GIS Development</li>
                             <li>Cartography</li>
-                            <li>Network Analysis</li>
-                            <li>Multiple-criteria Analysis</li>
-                            <li>​Geospatial Data Management & Integration</li>
-                            <li>​Nature-based Solutions</li>
+                            <li>Geodatabase Management</li>
+                            <li>Web GIS Development</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Research Interests</h3>
+                        <ul class="skill-list">
+                            <li>Environmental Monitoring</li>
+                            <li>Climate Change Studies</li>
+                            <li>Land Use Change</li>
+                            <li>Urban Planning</li>
+                            <li>Sustainable Development</li>
+                            <li>Natural Resource Management</li>
                         </ul>
                     </div>
                 </div>
@@ -526,14 +531,19 @@
             <section class="section" id="education">
                 <h2>Education</h2>
                 <div class="education-item">
-                    <h3>M.Sc. in GIS and Spatial Planning</h3>
-                    <div class="education-details">University of Porto | 2022 - 2024</div>
-                    <p>Geographic Data Acquisition and Editing, Cartography and GIS, Remote Sensing, Spatial Analysis, Land Use Planning and Management, Programming, WebSIG Applications, Relational Databases</p>
+                    <h3>Ph.D. in Remote Sensing and GIS</h3>
+                    <div class="education-details">University Name | Year - Year</div>
+                    <p>Dissertation: "Advanced Machine Learning Techniques for Multi-temporal Satellite Image Analysis." Research focused on developing novel algorithms for automated change detection in Earth observation data.</p>
                 </div>
                 <div class="education-item">
-                    <h3>BA (Hons) in Accounting and Finance</h3>
-                    <div class="education-details">University of East London | 2011 - 2013</div>
-                    <p>Business Economics, Mathematics and Statistics, Researching in Accounting & Finance</p>
+                    <h3>M.Sc. in Geospatial Technology</h3>
+                    <div class="education-details">University Name | Year - Year</div>
+                    <p>Specialized in spatial analysis and remote sensing applications. Thesis on "Urban Growth Modeling Using Cellular Automata and GIS." Graduated with distinction.</p>
+                </div>
+                <div class="education-item">
+                    <h3>B.Sc. in Geography</h3>
+                    <div class="education-details">University Name | Year - Year</div>
+                    <p>Foundation in physical and human geography with emphasis on quantitative methods and spatial analysis. Graduated summa cum laude.</p>
                 </div>
             </section>
         </div>
@@ -543,7 +553,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>Get in touch:</p>
-                <a href="mailto:yanchenggis@gmail.com" class="email-link">yanchenggis@gmail.com</a>
+                <a href="mailto:your.email@example.com" class="email-link">your.email@example.com</a>
             </div>
         </div>
     </footer>
