@@ -20,21 +20,27 @@
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 40px;
+          font-family: Arial, sans-serif;
         }
 
         /* Header Styles */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
+        .header {
+          font-size: 32px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        
+        /* Subheader or description */
+        .subheader {
+          font-size: 18px;
+          color: #555;
+          margin-bottom: 30px;
+          text-align: center;
+          max-width: 600px;
         }
 
         .header-content {
@@ -80,46 +86,31 @@
             z-index: 2;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
+        .nav-tabs {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 40px;
         }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        
+        .nav-tabs a {
+          text-decoration: none;
+          color: #007bff;
+          font-weight: bold;           /* Make tabs bold */
+          transition: color 0.2s ease;
         }
-
-        .nav-links a:hover {
-            color: #4a9eff;
-            transform: translateY(-2px);
+        
+        .nav-tabs a:hover {
+          color: #0056b3;
         }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #4a9eff;
-            transition: width 0.3s ease;
+        
+        /* Make links open in a new tab */
+        .nav-tabs a::after {
+          content: ' ↗';
+          font-size: 0.9em;
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
         /* Main Content */
         main {
-            margin-top: 80px;
+            margin-top: 140px;
             padding: 2rem 0;
         }
 
@@ -171,10 +162,9 @@
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #404040;
+            border: 5px solid #667eea;
             transition: transform 0.3s ease;
             justify-self: center;
-            box-shadow: 0 8px 25px rgba(64, 64, 64, 0.3);
         }
 
         .profile-img:hover {
@@ -391,9 +381,9 @@
                 </div>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#erasmus">Erasmus</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://storymaps.arcgis.com/stories/97eb80f0f4b6427bbc94e681d975d8f4">Erasmus</a></li>
+                        <li><a href="https://doi.org/10.3390/land13111878">Publications</a></li>
+                        <li><a href="https://www.linkedin.com/in/yan-cheng-yc-tan-95ba90288/" target="_blank">LinkedIn</a></li>
                     </ul>
                 </nav>
             </div>
@@ -406,11 +396,18 @@
             <section class="section" id="about">
                 <h2>About Me</h2>
                 <div class="intro-content">
-                    <img src="images/your-profile-photo.jpg" alt="Your Name" class="profile-img">
+                    <img src="me.jpg" class="profile-img">
                     <div class="intro-text">
-                        <h3>Hello, I'm [Your Name]</h3>
-                        <p>Welcome to my portfolio! I'm a passionate researcher specializing in remote sensing, GIS, and spatial analysis. With a strong background in geospatial technologies and data science, I focus on innovative solutions for environmental monitoring and sustainable development.</p>
-                        <p>My work combines cutting-edge technology with practical applications to address real-world challenges. I'm dedicated to advancing our understanding of Earth systems through the power of geospatial analysis and remote sensing technologies.</p>
+                        <h3>Hello, I'm Yan Cheng</h3>
+                        <p>I am a GIS and Remote Sensing Specialist with a Master's in GIS and Spatial Planning, dedicated to applying 
+                            geospatial technology to solve real-world environmental challenges. My experience spans flood modeling, 
+                            fire susceptibility mapping, urban accessibility analysis, and nature-based solutions, utilizing tools such 
+                            as ArcMap, QGIS, Google Earth Engine, SNAP, and both MSI and SAR imagery.</p>
+                        <p>My international experience has enhanced my ability to collaborate effectively across diverse teams while 
+                            maintaining the self-motivation needed for independent work. Having participated in projects across multiple 
+                            countries, I bring a global perspective to local challenges. I remain flexible regarding work arrangements, 
+                            open to both remote positions and relocation opportunities that allow me to contribute to impactful geospatial 
+                            initiatives.</p>
                     </div>
                 </div>
             </section>
@@ -422,45 +419,37 @@
                     <div class="skill-category">
                         <h3>Software</h3>
                         <ul class="skill-list">
-                            <li>Python</li>
-                            <li>R Programming</li>
-                            <li>MATLAB</li>
-                            <li>JavaScript</li>
-                            <li>SQL</li>
+                            <li>ArcMap</li>
+                            <li>QGIS</li>
                             <li>Google Earth Engine</li>
+                            <li>SNAP</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Visual Paradigm</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Remote Sensing</h3>
                         <ul class="skill-list">
-                            <li>Satellite Image Analysis</li>
-                            <li>ENVI & ERDAS IMAGINE</li>
-                            <li>Spectral Analysis</li>
-                            <li>Change Detection</li>
-                            <li>Classification Algorithms</li>
-                            <li>Hyperspectral Imaging</li>
+                            <li>SAR and Optical Imagery Processing</li>
+                            <li>Vegetation Index Analysis</li>
+                            <li>Land Cover Classification by Machine Learning Algorithms</li>
+                            <li>Change Classification</li>
+                            <li>Wildfire Detection</li>
+                            <li>Flood Modeling</li>
+                            <li>Species Resilience Analysis</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>GIS Skills</h3>
                         <ul class="skill-list">
-                            <li>ArcGIS Pro</li>
-                            <li>QGIS</li>
                             <li>Spatial Analysis</li>
-                            <li>Cartography</li>
-                            <li>Geodatabase Management</li>
                             <li>Web GIS Development</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Research Interests</h3>
-                        <ul class="skill-list">
-                            <li>Environmental Monitoring</li>
-                            <li>Climate Change Studies</li>
-                            <li>Land Use Change</li>
-                            <li>Urban Planning</li>
-                            <li>Sustainable Development</li>
-                            <li>Natural Resource Management</li>
+                            <li>Cartography</li>
+                            <li>Network Analysis</li>
+                            <li>Multiple-criteria Analysis</li>
+                            <li>​Geospatial Data Management & Integration</li>
+                            <li>​Nature-based Solutions</li>
                         </ul>
                     </div>
                 </div>
@@ -531,19 +520,14 @@
             <section class="section" id="education">
                 <h2>Education</h2>
                 <div class="education-item">
-                    <h3>Ph.D. in Remote Sensing and GIS</h3>
-                    <div class="education-details">University Name | Year - Year</div>
-                    <p>Dissertation: "Advanced Machine Learning Techniques for Multi-temporal Satellite Image Analysis." Research focused on developing novel algorithms for automated change detection in Earth observation data.</p>
+                    <h3>M.Sc. in GIS and Spatial Planning</h3>
+                    <div class="education-details">University of Porto | 2022 - 2024</div>
+                    <p>Geographic Data Acquisition and Editing, Cartography and GIS, Remote Sensing, Spatial Analysis, Land Use Planning and Management, Programming, WebSIG Applications, Relational Databases</p>
                 </div>
                 <div class="education-item">
-                    <h3>M.Sc. in Geospatial Technology</h3>
-                    <div class="education-details">University Name | Year - Year</div>
-                    <p>Specialized in spatial analysis and remote sensing applications. Thesis on "Urban Growth Modeling Using Cellular Automata and GIS." Graduated with distinction.</p>
-                </div>
-                <div class="education-item">
-                    <h3>B.Sc. in Geography</h3>
-                    <div class="education-details">University Name | Year - Year</div>
-                    <p>Foundation in physical and human geography with emphasis on quantitative methods and spatial analysis. Graduated summa cum laude.</p>
+                    <h3>BA (Hons) in Accounting and Finance</h3>
+                    <div class="education-details">University of East London | 2011 - 2013</div>
+                    <p>Business Economics, Mathematics and Statistics, Researching in Accounting & Finance</p>
                 </div>
             </section>
         </div>
@@ -553,7 +537,7 @@
         <div class="container">
             <div class="footer-content">
                 <p>Get in touch:</p>
-                <a href="mailto:your.email@example.com" class="email-link">your.email@example.com</a>
+                <a href="mailto:yanchenggis@gmail.com" class="email-link">yanchenggis@gmail.com</a>
             </div>
         </div>
     </footer>
