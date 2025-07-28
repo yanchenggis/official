@@ -209,6 +209,52 @@
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
+        .tools-compact {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Developed Tools & Applications */
+        .tool-link-box {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 1.5rem;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .tool-link-box:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .tool-link-box strong {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-link-box:hover strong {
+            color: white;
+        }
+        
+        .tool-link-box span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .tool-link-box:hover span {
+            color: rgba(255,255,255,0.9);
+        }
+
         /* Portfolio Section */
         .portfolio-grid {
             display: grid;
@@ -456,6 +502,24 @@
                             <li>​Nature-based Solutions</li>
                         </ul>
                     </div>
+                </div>
+            </section>
+
+            <!-- Developed Tools & Applications Section -->
+            <section class="section" id="tools">
+                <h2>Developed Tools & Applications</h2>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    I developed tools to optimize repetitive work in my analysis workflows.
+                </p>
+                <div class="tools-compact">
+                    <a href="https://yanchenggis.github.io/db_mgmt/" target="_blank" class="tool-link-box">
+                        <strong>Spatial Database Analysis Toolkit</strong>
+                        <span>Data profiling & cleaning scripts</span>
+                    </a>
+                    <a href="https://yanchenggis.github.io/matrix_analyzer/" target="_blank" class="tool-link-box">
+                        <strong>Matrix Analyzer Toolkit</strong>
+                        <span>Matrix analysis for spatial data</span>
+                    </a>
                 </div>
             </section>
 
