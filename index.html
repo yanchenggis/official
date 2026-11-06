@@ -564,6 +564,7 @@ async function typeReady(){
   const tok = ++typeTok, box = document.getElementById('tl');
   const sleep = ms => new Promise(r=>setTimeout(r,ms));
   box.innerHTML = ''; readyOn = false;
+  document.getElementById('go').classList.remove('on');
   await sleep(700);
   for(const L of READY_LINES){
     if(tok!==typeTok) return;
@@ -573,12 +574,13 @@ async function typeReady(){
     for(const ch of L.t){ if(tok!==typeTok) return; txt.nodeValue += ch; await sleep(L.c==='big' ? 60 : 16+Math.random()*22); }
     if(L.c!=='big'){ caret.remove(); await sleep(260); }
   }
-  if(tok===typeTok){ await sleep(500); if(tok===typeTok) readyOn = true; }
+  if(tok===typeTok){ readyOn = true; document.getElementById('go').classList.add('on'); } }
 }
 /* old: button click + Enter
 document.getElementById('go').onclick = enterGlobe;
 addEventListener('keydown', e=>{ if(e.key==='Enter' && document.getElementById('go').classList.contains('on')) enterGlobe(); });
 */
+document.getElementById('go').onclick = enterGlobe;
 addEventListener('keydown', e=>{
   if(e.key==='Enter' && readyOn){ e.preventDefault(); enterGlobe(); }
 });
