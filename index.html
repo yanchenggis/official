@@ -574,7 +574,7 @@ async function typeReady(){
     for(const ch of L.t){ if(tok!==typeTok) return; txt.nodeValue += ch; await sleep(L.c==='big' ? 60 : 16+Math.random()*22); }
     if(L.c!=='big'){ caret.remove(); await sleep(260); }
   }
-  if(tok===typeTok){ readyOn = true; document.getElementById('go').classList.add('on'); } }
+    if(tok===typeTok){ await sleep(500); if(tok===typeTok){ readyOn = true; document.getElementById('go').classList.add('on'); } }
 }
 /* old: button click + Enter
 document.getElementById('go').onclick = enterGlobe;
